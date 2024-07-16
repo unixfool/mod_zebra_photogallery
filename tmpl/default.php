@@ -1,7 +1,6 @@
 <?php defined('_JEXEC') or die; ?>
 
 <?php 
-
 /**
  * This file is part of the Zebra Photogallery module.
  *

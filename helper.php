@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * This file is part of the Zebra Photo gallery module.
  *
