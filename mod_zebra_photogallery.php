@@ -1,4 +1,7 @@
 <?php
+
+
+
 /**
  * This file is part of the Zebra Photogallery module.
  *
@@ -17,6 +20,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+ 
+ 
 defined('_JEXEC') or die;
 
 require_once dirname(__FILE__) . '/helper.php';
