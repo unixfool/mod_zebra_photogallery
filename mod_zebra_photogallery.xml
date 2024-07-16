@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="4.0" client="site" method="upgrade">
     <name>Zebra Photo Gallery</name>
     <author>y2k</author>
     <creationDate>2024-07-11</creationDate>
     <copyright>(C) 2024 Desarrollar IA.</copyright>
     <authorEmail>y2k@desarrollaria.com</authorEmail>
-    <authorUrl>www.desarrollaria.com</authorUrl>
+    <authorUrl>https://www.desarrollaria.com</authorUrl>
     <version>1.0.0</version>
     <description>MOD_ZEBRA_PHOTOGALLERY_DESCRIPTION</description>
     <license>GPL-3.0-or-later</license>
