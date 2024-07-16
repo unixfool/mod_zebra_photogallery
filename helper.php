@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 
 class ModPhotoGalleryHelper {
     public static function getImages($repoUrl, $imagesPerPage, $currentPage, $imageALT) {
-        $cache = JFactory::getCache('mod_zebra_photogallery', 'output');
+        $cache = \Joomla\CMS\Factory::getCache('mod_zebra_photogallery', 'output');
         $cacheKey = md5($repoUrl);
 
         // Intentar obtener las imágenes del caché
@@ -52,7 +52,7 @@ class ModPhotoGalleryHelper {
                 // Almacenar las imágenes en el caché
                 $cache->store($images, $cacheKey);
             } else {
-                JLog::add('No se encontró el directorio: ' . $dir, JLog::ERROR, 'mod_zebra_photogallery');
+                \Joomla\CMS\Log\Log::add('No se encontró el directorio: ' . $dir, \Joomla\CMS\Log\Log::ERROR, 'mod_zebra_photogallery');
             }
         }
 

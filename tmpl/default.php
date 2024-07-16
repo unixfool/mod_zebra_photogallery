@@ -35,16 +35,24 @@ if ($enableFancybox) : ?>
         <!-- Botones de navegación -->
         <div class="pagination-buttons">
             <?php if ($currentPage > 1) : ?>
-                <?php $prevPageUrl = JRoute::_('index.php?option=com_content&view=article&id=' . JFactory::getApplication()->input->getInt('id') . '&page=' . ($currentPage - 1)); ?>
+                <?php
+                $prevPageUrl = \Joomla\CMS\Router\Route::_(
+                    'index.php?option=com_content&view=article&id=' . \Joomla\CMS\Factory::getApplication()->input->getInt('id') . '&page=' . ($currentPage - 1)
+                );
+                ?>
                 <a href="<?php echo $prevPageUrl; ?>" class="btn btn-prev">
-                    <i class="fas fa-chevron-circle-left"></i> <?php echo JText::_('MOD_ZEBRA_PHOTOGALLERY_PREV_PAGE'); ?>
+                    <i class="fas fa-chevron-circle-left"></i> <?php echo \Joomla\CMS\Language\Text::_('MOD_ZEBRA_PHOTOGALLERY_PREV_PAGE'); ?>
                 </a>
             <?php endif; ?>
 
             <?php if ($currentPage < $totalPages) : ?>
-                <?php $nextPageUrl = JRoute::_('index.php?option=com_content&view=article&id=' . JFactory::getApplication()->input->getInt('id') . '&page=' . ($currentPage + 1)); ?>
+                <?php
+                $nextPageUrl = \Joomla\CMS\Router\Route::_(
+                    'index.php?option=com_content&view=article&id=' . \Joomla\CMS\Factory::getApplication()->input->getInt('id') . '&page=' . ($currentPage + 1)
+                );
+                ?>
                 <a href="<?php echo $nextPageUrl; ?>" class="btn btn-next">
-                    <?php echo JText::_('MOD_ZEBRA_PHOTOGALLERY_NEXT_PAGE'); ?> <i class="fas fa-chevron-circle-right"></i></i>
+                    <?php echo \Joomla\CMS\Language\Text::_('MOD_ZEBRA_PHOTOGALLERY_NEXT_PAGE'); ?> <i class="fas fa-chevron-circle-right"></i>
                 </a>
             <?php endif; ?>
         </div>
@@ -56,13 +64,13 @@ if ($enableFancybox) : ?>
         <?php if (!empty($images)) : ?>
             <?php foreach ($images as $image) : ?>
                 <div class="photo columns-<?php echo (int)$columns; ?>">
-                    <a href="<?php echo htmlspecialchars($image['url']); ?>" class="<?php echo $enableFancybox ? 'fancybox' : ''; ?>" data-fancybox="gallery" data-caption="<?php echo htmlspecialchars($image['alt']); ?>">
-                        <img src="<?php echo htmlspecialchars($image['url']); ?>" alt="<?php echo htmlspecialchars($image['alt']); ?>">
+                    <a href="<?php echo htmlspecialchars($image['url'], ENT_QUOTES, 'UTF-8'); ?>" class="<?php echo $enableFancybox ? 'fancybox' : ''; ?>" data-fancybox="gallery" data-caption="<?php echo htmlspecialchars($image['alt'], ENT_QUOTES, 'UTF-8'); ?>">
+                        <img src="<?php echo htmlspecialchars($image['url'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($image['alt'], ENT_QUOTES, 'UTF-8'); ?>">
                     </a>
                 </div>
             <?php endforeach; ?>
         <?php else : ?>
-            <p><?php echo JText::_('MOD_ZEBRA_PHOTOGALLERY_NO_IMAGES'); ?></p>
+            <p><?php echo \Joomla\CMS\Language\Text::_('MOD_ZEBRA_PHOTOGALLERY_NO_IMAGES'); ?></p>
         <?php endif; ?>
     </div>
 </div>
@@ -70,7 +78,7 @@ if ($enableFancybox) : ?>
 <div class="nav">
     <?php if ($showPagination && $totalPages > 1) : ?>
         <!-- Paginación condensada al final de la galería -->
-        <nav aria-label="<?php echo JText::_('MOD_PHOTO_GALLERY_PAGE_NAVIGATION'); ?>">
+        <nav aria-label="<?php echo \Joomla\CMS\Language\Text::_('MOD_PHOTO_GALLERY_PAGE_NAVIGATION'); ?>">
             <ul class="pagination">
                 <?php
                 // Define el rango de páginas a mostrar
@@ -80,7 +88,9 @@ if ($enableFancybox) : ?>
 
                 // Mostrar el primer enlace de página siempre
                 if ($start > 1) {
-                    $paginationUrl = JRoute::_('index.php?option=com_content&view=article&id=' . JFactory::getApplication()->input->getInt('id') . '&page=1');
+                    $paginationUrl = \Joomla\CMS\Router\Route::_(
+                        'index.php?option=com_content&view=article&id=' . \Joomla\CMS\Factory::getApplication()->input->getInt('id') . '&page=1'
+                    );
                     echo '<li class="page-item"><a href="' . $paginationUrl . '" class="page-link">1</a></li>';
                     if ($start > 2) {
                         echo '<li class="page-item disabled"><span class="page-link">...</span></li>';
@@ -89,7 +99,9 @@ if ($enableFancybox) : ?>
 
                 // Mostrar el rango de páginas
                 for ($i = $start; $i <= $end; $i++) {
-                    $paginationUrl = JRoute::_('index.php?option=com_content&view=article&id=' . JFactory::getApplication()->input->getInt('id') . '&page=' . $i);
+                    $paginationUrl = \Joomla\CMS\Router\Route::_(
+                        'index.php?option=com_content&view=article&id=' . \Joomla\CMS\Factory::getApplication()->input->getInt('id') . '&page=' . $i
+                    );
                     echo '<li class="page-item' . ($i == $currentPage ? ' active' : '') . '"><a href="' . $paginationUrl . '" class="page-link">' . $i . '</a></li>';
                 }
 
@@ -98,16 +110,17 @@ if ($enableFancybox) : ?>
                     if ($end < $totalPages - 1) {
                         echo '<li class="page-item disabled"><span class="page-link">...</span></li>';
                     }
-                    $paginationUrl = JRoute::_('index.php?option=com_content&view=article&id=' . JFactory::getApplication()->input->getInt('id') . '&page=' . $totalPages);
+                    $paginationUrl = \Joomla\CMS\Router\Route::_(
+                        'index.php?option=com_content&view=article&id=' . \Joomla\CMS\Factory::getApplication()->input->getInt('id') . '&page=' . $totalPages
+                    );
                     echo '<li class="page-item"><a href="' . $paginationUrl . '" class="page-link">' . $totalPages . '</a></li>';
                 }
                 ?>
             </ul>
         </nav>
     <?php endif; ?>
-	
 </div>
 
 <div style="text-align:right;font-size:12px;display:block;padding:5px;position:relative;">
-	<p><a href="https://desarrollaria.com/herramientas" target="_blank"><?php echo JText::_('MOD_ZEBRA_PHOTOGALLERY_COPYRIGHT'); ?></a></p>
+    <p><a href="https://desarrollaria.com/herramientas" target="_blank"><?php echo \Joomla\CMS\Language\Text::_('MOD_ZEBRA_PHOTOGALLERY_COPYRIGHT'); ?></a></p>
 </div>
