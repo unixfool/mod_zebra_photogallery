@@ -7,10 +7,15 @@
     <authorUrl>www.desarrollaria.com</authorUrl>
     <version>1.0.0</version>
     <description>MOD_ZEBRA_PHOTOGALLERY_DESCRIPTION</description>
-
-    <!-- Añadir la etiqueta de licencia -->
     <license>GPL-3.0-or-later</license>
-    
+
+    <!-- Añadir la etiqueta de servidor de actualización -->
+    <update>
+        <servers>
+            <server type="extension" priority="1">https://github.com/unixfool/mod_zebra_photogallery/blob/module/mod_zebra_photogallery.xml</server>
+        </servers>
+    </update>
+
     <config>
         <fields name="params">
             <fieldset name="basic" label="MOD_ZEBRA_PHOTOGALLERY_CONFIG_TITLE">
