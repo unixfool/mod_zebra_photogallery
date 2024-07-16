@@ -1,5 +1,5 @@
 <extension type="module" version="4.0" client="site" method="upgrade">
-    <name>MOD_ZEBRA_PHOTOGALLERY</name>
+    <name>Zebra Photo Gallery</name>
     <author>y2k</author>
     <creationDate>2024-07-11</creationDate>
     <copyright>(C) 2024 Desarrollar IA.</copyright>
