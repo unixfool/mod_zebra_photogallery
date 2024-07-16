@@ -7,6 +7,9 @@
     <authorUrl>www.desarrollaria.com</authorUrl>
     <version>1.0.0</version>
     <description>MOD_ZEBRA_PHOTOGALLERY_DESCRIPTION</description>
+
+    <!-- Añadir la etiqueta de licencia -->
+    <license>GPL-3.0-or-later</license>
     
     <config>
         <fields name="params">
@@ -42,28 +45,28 @@
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_IMAGES_ALT_LABEL" 
                        description="MOD_ZEBRA_PHOTOGALLERY_FIELD_IMAGES_ALT_DESC" />
 					   
-				<field name="template" 
-					   type="list" 
-					   label="MOD_ZEBRA_PHOTOGALLERY_FIELD_TEMPLATE_LABEL" 
-					   description="MOD_ZEBRA_PHOTOGALLERY_FIELD_TEMPLATE_DESC">
-					<option value="style">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DEFAULT</option>
-					<option value="style2">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_GENERARIA</option>
-					<option value="style3">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DESARROLLARIA</option>
-					<option value="style4">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_ESPECIASYSABORES</option>
-					<option value="style5">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DELEGARIA</option>
-				</field>
+                <field name="template" 
+                       type="list" 
+                       label="MOD_ZEBRA_PHOTOGALLERY_FIELD_TEMPLATE_LABEL" 
+                       description="MOD_ZEBRA_PHOTOGALLERY_FIELD_TEMPLATE_DESC">
+                    <option value="style">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DEFAULT</option>
+                    <option value="style2">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_GENERARIA</option>
+                    <option value="style3">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DESARROLLARIA</option>
+                    <option value="style4">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_ESPECIASYSABORES</option>
+                    <option value="style5">MOD_ZEBRA_PHOTOGALLERY_TEMPLATE_DELEGARIA</option>
+                </field>
 
                 <field name="show_pagination" 
                        type="radio" 
                        default="1" 
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_SHOW_PAGINATION_LABEL" 
-					   layout="joomla.form.field.radio.switcher"
+                       layout="joomla.form.field.radio.switcher"
                        description="MOD_ZEBRA_PHOTOGALLERY_FIELD_SHOW_PAGINATION_DESC">
                     <option value="0">MOD_ZEBRA_PHOTOGALLERY_MENU_OFF</option>
                     <option value="1">MOD_ZEBRA_PHOTOGALLERY_MENU_ON</option>
                 </field>
 				
-				<field name="cache_lifetime" 
+                <field name="cache_lifetime" 
                        type="number" 
                        default="3600" 
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_CACHE_LIFETIME_LABEL" 
@@ -73,7 +76,7 @@
                        type="radio"
                        default="1"
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_ENABLE_FANCYBOX_LABEL"
-					   layout="joomla.form.field.radio.switcher"
+                       layout="joomla.form.field.radio.switcher"
                        description="MOD_ZEBRA_PHOTOGALLERY_FIELD_ENABLE_FANCYBOX_DESC">
                     <option value="0">MOD_ZEBRA_PHOTOGALLERY_MENU_OFF</option>
                     <option value="1">MOD_ZEBRA_PHOTOGALLERY_MENU_ON</option>
@@ -93,7 +96,7 @@
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.mod_zebra_photogallery.ini</language>
         <language tag="en-GB">en-GB/en-GB.mod_zebra_photogallery.sys.ini</language>     
-		<language tag="en-US">en-US/en-US.mod_zebra_photogallery.ini</language>
+        <language tag="en-US">en-US/en-US.mod_zebra_photogallery.ini</language>
         <language tag="en-US">en-US/en-US.mod_zebra_photogallery.sys.ini</language>
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.ini</language>
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.sys.ini</language>
