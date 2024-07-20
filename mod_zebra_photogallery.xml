@@ -100,4 +100,15 @@
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.ini</language>
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.sys.ini</language>
     </languages>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+        <maintainer>y2k</maintainer>
+        <maintainerurl>https://www.desarrollaria.com</maintainerurl>
+        <updateservers>
+            <server type="extension" priority="1">https://www.desarrollaria.com/updates</server>
+        </updateservers>
+    </update>
 </extension>

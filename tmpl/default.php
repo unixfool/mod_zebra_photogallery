@@ -19,6 +19,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
+ /**
+ * @package    Zebra Photo Gallery
+ * @copyright  Copyright (C) [2024] [DesarrollarIA]. All rights reserved.
+ * @license    GPL-3.0-or-later; See LICENSE.txt or http://www.gnu.org/licenses/gpl-3.0.html
+ * @link       [https://desarrollaria.com/herramientas/joomla/modulo/zebra-galeria-de-fotos]
+ */
  
 $enableFancybox = $params->get('enable_fancybox', 1);
 
