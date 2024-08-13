@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="4.0" client="site" method="upgrade">
-    <name>Zebra Photo Gallery</name>
-    <author>y2k</author>
+<extension type="module" version="1.1.0" client="site" method="upgrade">
+    <name>Zebra-PhotoGallery</name>
     <creationDate>2024-07-11</creationDate>
-    <copyright>(C) 2024 Desarrollar IA.</copyright>
+    <author>y2k</author>
+    <copyright>(C) 2024 Desarrollar IA. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses GNU/GPL</license>
     <authorEmail>y2k@desarrollaria.com</authorEmail>
     <authorUrl>https://www.desarrollaria.com</authorUrl>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <description>MOD_ZEBRA_PHOTOGALLERY_DESCRIPTION</description>
-    <license>GPL-3.0-or-later</license>
 
     <config>
         <fields name="params">
@@ -43,7 +43,7 @@
                        default="ALT" 
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_IMAGES_ALT_LABEL" 
                        description="MOD_ZEBRA_PHOTOGALLERY_FIELD_IMAGES_ALT_DESC" />
-					   
+                       
                 <field name="template" 
                        type="list" 
                        label="MOD_ZEBRA_PHOTOGALLERY_FIELD_TEMPLATE_LABEL" 
@@ -64,7 +64,7 @@
                     <option value="0">MOD_ZEBRA_PHOTOGALLERY_MENU_OFF</option>
                     <option value="1">MOD_ZEBRA_PHOTOGALLERY_MENU_ON</option>
                 </field>
-				
+                
                 <field name="cache_lifetime" 
                        type="number" 
                        default="3600" 
@@ -80,7 +80,7 @@
                     <option value="0">MOD_ZEBRA_PHOTOGALLERY_MENU_OFF</option>
                     <option value="1">MOD_ZEBRA_PHOTOGALLERY_MENU_ON</option>
                 </field>
-				
+                
             </fieldset>
         </fields>
     </config>
@@ -100,15 +100,10 @@
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.ini</language>
         <language tag="es-ES">es-ES/es-ES.mod_zebra_photogallery.sys.ini</language>
     </languages>
-
-    <update>
-        <schemas>
-            <schemapath type="mysql">sql/updates/mysql</schemapath>
-        </schemas>
-        <maintainer>y2k</maintainer>
-        <maintainerurl>https://www.desarrollaria.com</maintainerurl>
-        <updateservers>
-            <server type="extension" priority="1">https://www.desarrollaria.com/updates</server>
-        </updateservers>
-    </update>
+    
+    <updateservers>
+        <server type="extension" priority="1" name="Zebra Photo Gallery Updates">https://raw.githubusercontent.com/unixfool/zebra_photogallery_update/main/update.xml</server>
+    </updateservers>
+    
+    <!-- Otros detalles de tu módulo -->
 </extension>
